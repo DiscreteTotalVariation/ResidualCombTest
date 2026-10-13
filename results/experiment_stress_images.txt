@@ -1,0 +1,15 @@
+all usable skimage images, n=64, N=2000, eps=+-0.06, worse sign, 40000 draws
+           image   min E      CT      X2     X2p       G   ratio
+       astronaut    4.07   0.245   0.141   0.142   0.143    1.73
+          camera    1.28   0.332   0.149   0.155   0.157    2.14
+            cell    0.08   0.657   0.129   0.263   0.204    2.50
+          coffee    0.87   0.263   0.151   0.151   0.151    1.75
+           coins    0.02   0.321   0.113   0.177   0.166    1.81
+      colorwheel    6.94   0.201   0.123   0.123   0.125    1.63
+hubble_deep_field    0.24   0.619   0.144   0.257   0.195    2.40
+            moon    0.03   0.657   0.115   0.321   0.238    2.05
+            page    0.35   0.278   0.140   0.149   0.150    1.87
+          rocket    0.37   0.442   0.141   0.201   0.170    2.20
+
+10 images.  CT / pooled-X2 ratio from 1.63 (colorwheel) to 2.50 (cell)
+images where the CT does NOT beat pooled chi-square: 0

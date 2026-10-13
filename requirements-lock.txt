@@ -1,0 +1,10 @@
+# The exact versions that produced every file in results/.
+# requirements.txt gives floors; this file gives the measured environment, so a
+# reader who cannot reproduce a Monte Carlo number byte for byte can check
+# whether the stream generator differs.  The EXACT results (Table I, the bias
+# survey, the critical values, Proposition 1) do not depend on any of this.
+# python 3.12.3 (the interpreter; not a pip package -- do not pass this line to pip)
+numpy==2.4.1
+scipy==1.17.1
+matplotlib==3.10.8
+scikit-image==0.26.0

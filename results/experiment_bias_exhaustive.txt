@@ -1,0 +1,83 @@
+Exhaustive, seed-free bias survey: exact size and exact power against every
+period-2 comb on a fixed amplitude grid, over COMPLETE families of rational
+nulls.  No randomness anywhere, so the worst case is a property of the family
+and is reproducible to the last digit.  alpha = 0.05.
+Amplitudes: 1/100, 1/50, 1/25, 1/20, 1/10, 1/5, 1/4, 1/3, 1/2, both signs.
+power/size below 1 means the test is biased against that alternative.
+
+family: 3 bins, weights 1..9, N in (12, 16, 20, 25, 30, 40)
+    ... n=3, N=12 done
+    ... n=3, N=16 done
+    ... n=3, N=20 done
+    ... n=3, N=25 done
+    ... n=3, N=30 done
+    ... n=3, N=40 done
+    636 nulls in lowest terms, uniform excluded
+    CT: below size in 15867/68688 (23.1%)
+    CT worst shortfall           0.0445   at q=(1, 1, 7), N=30, eps=0.50, sign=+1; size 0.0464, power 0.0019 (power/size 0.04)
+    CT worst, eps <= 0.10        0.0254   at q=(1, 1, 7), N=30, eps=0.10, sign=+1; size 0.0464, power 0.0210 (power/size 0.45)
+    du: below size in 28117/68688 (40.9%)
+    du worst shortfall           0.0499   at q=(1, 7, 4), N=16, eps=0.50, sign=+1; size 0.0499, power 0.0001 (power/size 0.00)
+    du worst, eps <= 0.10        0.0383   at q=(3, 8, 4), N=40, eps=0.10, sign=+1; size 0.0495, power 0.0113 (power/size 0.23)
+
+family: 4 bins, weights 1..6, N in (12, 16, 20, 25)
+    ... n=4, N=12 done
+    ... n=4, N=16 done
+    ... n=4, N=20 done
+    ... n=4, N=25 done
+    1198 nulls in lowest terms, uniform excluded
+    CT: below size in 11790/86256 (13.7%)
+    CT worst shortfall           0.0157   at q=(1, 6, 1, 2), N=12, eps=0.33, sign=-1; size 0.0392, power 0.0235 (power/size 0.60)
+    CT worst, eps <= 0.10        0.0103   at q=(1, 2, 1, 6), N=12, eps=0.10, sign=-1; size 0.0493, power 0.0390 (power/size 0.79)
+    du: below size in 33086/86256 (38.4%)
+    du worst shortfall           0.0498   at q=(1, 5, 2, 5), N=25, eps=0.50, sign=+1; size 0.0500, power 0.0002 (power/size 0.00)
+    du worst, eps <= 0.10        0.0324   at q=(2, 1, 6, 6), N=25, eps=0.10, sign=-1; size 0.0493, power 0.0169 (power/size 0.34)
+
+family: 5 bins, weights 1..4, N in (12, 16, 20)
+    ... n=5, N=12 done
+    ... n=5, N=16 done
+    ... n=5, N=20 done
+    990 nulls in lowest terms, uniform excluded
+    CT: below size in 9890/53460 (18.5%)
+    CT worst shortfall           0.0138   at q=(3, 1, 1, 1, 4), N=12, eps=0.25, sign=+1; size 0.0441, power 0.0303 (power/size 0.69)
+    CT worst, eps <= 0.10        0.0099   at q=(1, 1, 4, 1, 2), N=12, eps=0.10, sign=+1; size 0.0450, power 0.0351 (power/size 0.78)
+    du: below size in 19794/53460 (37.0%)
+    du worst shortfall           0.0494   at q=(1, 3, 1, 3, 1), N=20, eps=0.50, sign=+1; size 0.0494, power 0.0000 (power/size 0.00)
+    du worst, eps <= 0.10        0.0299   at q=(1, 2, 1, 3, 2), N=20, eps=0.10, sign=+1; size 0.0483, power 0.0184 (power/size 0.38)
+
+family: 6 bins, weights 1..3, N in (12, 16, 20)
+    ... n=6, N=12 done
+    ... n=6, N=16 done
+    ... n=6, N=20 done
+    726 nulls in lowest terms, uniform excluded
+    CT: below size in 4206/39204 (10.7%)
+    CT worst shortfall           0.0043   at q=(1, 2, 1, 2, 1, 3), N=12, eps=0.10, sign=-1; size 0.0465, power 0.0422 (power/size 0.91)
+    CT worst, eps <= 0.10        0.0043   at q=(1, 2, 1, 2, 1, 3), N=12, eps=0.10, sign=-1; size 0.0465, power 0.0422 (power/size 0.91)
+    du: below size in 13202/39204 (33.7%)
+    du worst shortfall           0.0492   at q=(1, 1, 3, 1, 3, 1), N=20, eps=0.50, sign=-1; size 0.0498, power 0.0006 (power/size 0.01)
+    du worst, eps <= 0.10        0.0287   at q=(1, 1, 3, 1, 3, 2), N=20, eps=0.10, sign=-1; size 0.0500, power 0.0213 (power/size 0.43)
+
+OVERALL, all families pooled
+  CT: below size in 41753/247608 (16.9%) of (null, N, comb) cases
+    CT worst shortfall           0.0445   at q=(1, 1, 7), N=30, eps=0.50, sign=+1; size 0.0464, power 0.0019 (power/size 0.04)
+    CT worst, eps <= 0.10        0.0254   at q=(1, 1, 7), N=30, eps=0.10, sign=+1; size 0.0464, power 0.0210 (power/size 0.45)
+  du: below size in 94199/247608 (38.0%) of (null, N, comb) cases
+    du worst shortfall           0.0499   at q=(1, 7, 4), N=16, eps=0.50, sign=+1; size 0.0499, power 0.0001 (power/size 0.00)
+    du worst, eps <= 0.10        0.0383   at q=(3, 8, 4), N=40, eps=0.10, sign=+1; size 0.0495, power 0.0113 (power/size 0.23)
+
+  by amplitude (share of cases below size / worst shortfall), all families pooled:
+     eps   CT below   CT worst   du below   du worst
+    0.01      42.2%     0.0035      48.8%     0.0061
+    0.02      35.7%     0.0067      48.1%     0.0116
+    0.04      25.5%     0.0124      46.5%     0.0209
+    0.05      21.7%     0.0150      45.8%     0.0248
+    0.10      11.3%     0.0254      42.0%     0.0383
+    0.20       5.0%     0.0370      34.9%     0.0478
+    0.25       4.1%     0.0399      31.6%     0.0490
+    0.33       3.4%     0.0427      26.5%     0.0496
+    0.50       2.9%     0.0445      18.0%     0.0499
+  (at the smallest amplitude power ~ size and the sign of the difference is a
+   lattice artifact, so about half the cases fall below size for ANY test)
+
+The Letter should quote these numbers, not a worst case over randomly
+drawn nulls: those move with the seed (0.0086 -> 0.0164 on a seed change).

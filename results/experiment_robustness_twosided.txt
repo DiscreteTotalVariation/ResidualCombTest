@@ -1,0 +1,12 @@
+what a two-sided CT would cost.  The Letter argues it is
+unnecessary because the statistic's minimum is the expected histogram;
+here the equal-tailed two-sided version is computed exactly alongside.
+
+                     q    N  one-sided size    power |  two-sided size    power    loss
+       (1, 2, 1, 2, 1)   40          0.0495   0.1987 |          0.0427   0.1354 +0.0633
+   (16, 8, 4, 2, 1, 1)   20          0.0469   0.0822 |          0.0359   0.0455 +0.0367
+ (1, 2, 3, 4, 3, 2, 1)   16          0.0473   0.0925 |          0.0407   0.0631 +0.0294
+    (1, 2, 3, 4, 5, 6)   20          0.0450   0.1180 |          0.0422   0.0873 +0.0307
+
+A positive loss means the two-sided version is strictly worse against the
+comb, which is the Letter's point stated as a number rather than an argument.

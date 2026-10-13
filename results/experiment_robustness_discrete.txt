@@ -1,0 +1,15 @@
+level lost to discreteness: the exact test's attained size against the
+nominal 0.05, and what a randomized test would recover
+
+                     q     N     L  atoms  attained      gap  atom at the cut
+       (1, 2, 1, 2, 1)    10     7     78   0.04902  0.00098          0.01653
+       (1, 2, 1, 2, 1)    40     7    361   0.04952  0.00048          0.00122
+       (1, 2, 1, 2, 1)   100     7    925   0.04972  0.00028          0.00188
+   (16, 8, 4, 2, 1, 1)    20    32    182   0.04689  0.00311          0.00756
+   (16, 8, 4, 2, 1, 1)    60    32    559   0.04745  0.00255          0.00406
+ (1, 2, 3, 4, 3, 2, 1)    20    16     84   0.04416  0.00584          0.01120
+ (1, 2, 3, 4, 3, 2, 1)    60    16    259   0.04909  0.00091          0.00438
+
+The gap is level the test cannot use; a randomized test would recover it by
+rejecting at the boundary atom with the right probability.  The gap shrinks
+as the support grows, which is why it matters only at small N.

@@ -1,0 +1,13 @@
+
+SPANNING: 27 nulls, l1=0.06, 40000 draws
+      N      index range    du worse sign    CT worse sign  Spearman
+    500   0.000..1.000      0.002..0.194      0.143..0.285        0.955
+   2000   0.000..1.000      0.000..0.646      0.531..0.819        0.961
+  10000   0.000..1.000      0.000..1.000      0.999..1.000        0.926
+
+RANDOM WEIGHTS: 14 nulls, l1=0.06, 40000 draws
+      N      index range    du worse sign    CT worse sign  Spearman
+    500   0.798..1.000      0.001..0.070      0.169..0.235        0.771
+   2000   0.878..1.000      0.000..0.105      0.588..0.733        0.864
+  10000   0.934..1.000      0.000..0.240      1.000..1.000        0.609
+  share of random-weight nulls with index above 0.9: 100%

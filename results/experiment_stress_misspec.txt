@@ -1,0 +1,11 @@
+size at alpha=0.05; calibration capture of M0 draws from the truth, add-one fix
+when a code is unoccupied; 12 calibration draws per image, 40000 null and
+40000 test draws each; mean over the 60 (image, draw) pairs with the range
+
+ M0/N                     CT                     X2                   T(1)                     du
+    1   0.650 [0.127,0.986]   0.872 [0.410,1.000]   0.569 [0.008,0.995]   0.040 [0.000,0.511]
+    5   0.155 [0.058,0.287]   0.214 [0.041,0.464]   0.154 [0.019,0.324]   0.036 [0.001,0.374]
+   25   0.066 [0.050,0.095]   0.090 [0.038,0.176]   0.079 [0.039,0.122]   0.045 [0.019,0.095]
+  125   0.053 [0.049,0.056]   0.064 [0.043,0.109]   0.059 [0.043,0.093]   0.047 [0.033,0.063]
+
+The Letter's Conclusions quote the M0/N = 1 and 125 rows.

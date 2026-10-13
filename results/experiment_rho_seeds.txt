@@ -1,0 +1,16 @@
+Collapse-index sweep repeated at several seeds.  The null family is
+partly random, so these summaries are random too.
+
+  seed  nulls  Spearman    CT worse-sign range
+    22     42    -0.868       0.780 to 0.968   
+   501     43    -0.837       0.786 to 0.986   
+   502     39    -0.898       0.775 to 0.968   
+   503     42    -0.868       0.763 to 0.990   
+   504     42    -0.843       0.798 to 1.000   
+
+Spearman over seeds: -0.90 to -0.84
+CT worse-sign floor over seeds: 0.763
+
+Quote the RANGE, not a two-decimal point estimate, and do not quote the
+index at which d_u first reaches alpha: that is a minimum over a
+random family and is not reproducible.

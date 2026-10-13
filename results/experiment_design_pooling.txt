@@ -1,0 +1,12 @@
+run-length histograms pooled at several tail cut-offs; the Letter uses 6.
+CT and X^2 power against the two-lane defect, MC-calibrated on the same windows.
+
+ pool at                        q     L   eps=0.05   eps=0.07    eps=0.1
+       4             (4, 2, 1, 1)     8 0.086/0.069 0.191/0.142 0.574/0.447
+       5          (8, 4, 2, 1, 1)    16 0.091/0.073 0.203/0.135 0.610/0.462
+       6      (16, 8, 4, 2, 1, 1)    32 0.086/0.068 0.192/0.125 0.603/0.427
+       7  (32, 16, 8, 4, 2, 1, 1)    64 0.088/0.064 0.207/0.121 0.615/0.405
+       8 (64, 32, 16, 8, 4, 2, 1, 1)   128 0.083/0.064 0.193/0.110 0.598/0.366
+
+cells are CT/X^2.  The Letter's claim is that the CT beats X^2 here;
+if that flips at some pooling depth, the choice of 6 would need defending.

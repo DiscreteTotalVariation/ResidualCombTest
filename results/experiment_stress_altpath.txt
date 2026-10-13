@@ -1,0 +1,10 @@
+dr_law(N, q1, q0) vs brute force; mass must be (sum q1)^N
+ case                   q0                   q1    N  mass ok  agrees
+    0      (1, 6, 5, 3, 5)      (6, 3, 6, 2, 9)    2      yes     yes
+    1            (4, 1, 4)            (6, 1, 1)    3      yes     yes
+    2               (8, 2)               (6, 8)    9      yes     yes
+    3               (8, 9)               (6, 4)    3      yes     yes
+    4               (8, 7)               (4, 5)    2      yes     yes
+    5            (9, 5, 9)            (4, 3, 7)    5      yes     yes
+
+120 random (q0, q1, N): 0 disagreements with brute force

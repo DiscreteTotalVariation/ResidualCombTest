@@ -1,0 +1,30 @@
+1. total mass == L**N
+  OK    q=[1, 2, 1, 2, 1], N=8: sum=5764801 vs L**N=5764801
+  OK    q=[16, 8, 4, 2, 1, 1], N=6: sum=1073741824 vs L**N=1073741824
+  OK    q=[1, 2, 3, 4, 3, 2, 1], N=5: sum=1048576 vs L**N=1048576
+  OK    q=[1, 1, 1, 1], N=9: sum=262144 vs L**N=262144
+2. uniform reduction: S == n * DTV
+  OK    n=4, N=8
+  OK    n=5, N=7
+  OK    n=6, N=6
+3. brute force enumeration
+  OK    q=[1, 2, 1, 2, 1], N=6
+  OK    q=[16, 8, 4, 2, 1, 1], N=5
+  OK    q=[1, 3, 1], N=8
+4. Monte Carlo agreement (max |exact CDF - empirical CDF|)
+  OK    q=[1, 2, 1, 2, 1], N=20: gap=0.00216 tol=0.00791
+  OK    q=[16, 8, 4, 2, 1, 1], N=15: gap=0.00124 tol=0.00791
+5. S == L * d_r (integer path vs floating point)
+  OK    q=[16, 8, 4, 2, 1, 1], N=200: max |d_r - S/L| = 0.00e+00
+  OK    q=[1, 2, 3, 4, 3, 2, 1], N=500: max |d_r - S/L| = 0.00e+00
+6. residue classes are invariant under q -> lambda*q
+  OK    q=(1, 2, 1, 2, 1): support size and residue count fixed for lambda up to 145 (L up to 1015)
+  OK    q=(16, 8, 4, 2, 1, 1): support size and residue count fixed for lambda up to 145 (L up to 4640)
+  OK    q=(3, 1, 4): support size and residue count fixed for lambda up to 145 (L up to 1160)
+7. Proposition 1: variance and the sign-locking bound
+  OK    q=[1, 2, 3, 4, 3, 2, 1], N=400: variance formula, max relative error 0.004
+  OK    q=[16, 8, 4, 2, 1, 1], N=200: variance formula, max relative error 0.005
+  OK    p=[0.2333 0.3333 0.4334], N=1000: Pr[not locked] 2.00e-04 <= bound 1.34e-02
+  OK    p=[0.1 0.2 0.3 0.4], N=2000: Pr[not locked] 0.00e+00 <= bound 1.36e-04
+
+ALL CHECKS PASSED

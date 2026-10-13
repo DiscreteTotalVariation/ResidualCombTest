@@ -1,0 +1,19 @@
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+
+# Precomputed exact distributions, ~205 MB.  NOT published: no experiment, figure
+# or table in the Letter reads them.  They are written by the code/generate_*.sh
+# drivers, which are included, so anyone can regenerate what they need.  Shipping
+# them would make every clone 200x larger for zero reproducible numbers.
+# The data behind the Letter is results/, which is 1 MB and is published.
+data/
+
+
+# Local helper: reads the manuscript and the parent repository by absolute path
+# and writes outside this repository; not part of the published code.
+code/build_code_html.py

@@ -1,0 +1,137 @@
+experiment_first_order_rate.py
+command: python3 experiment_first_order_rate.py --jobs 16
+python 3.12.3, numpy 2.4.1, scipy 1.17.1
+no seed: nothing is random.  Every row: enumeration of the multinomial in
+float64; at N in [20, 40] also full enumeration in exact integers.
+alpha = 1/20; box = conditional mean +- 10.0 sd (+3) per bin
+
+Slopes beta'(0) = Cov_H0(1{T>c}, sum_j delta_j x_j / p_j) along the UNIT-l1
+multiplicative period-2 comb ('+' raises odd bins), each divided by sqrt(N).
+int = integer cut c (size <= alpha); rnd = randomized cut (size = alpha exactly).
+ratio = slope(d_r) / slope(Lambda).  'mass out' = multinomial mass outside the box
+(1 - enumerated mass, clipped at 0; float64 rounding is ~1e-14).
+
+ramp   q = 1:2:3:4:5   L = 15
+  delta = (+0.0556, -0.1667, +0.1667, -0.3333, +0.2778)   Lambda = sum sgn(g_i) D_i, sgn(g) = [1, 1, 1, 1]
+     N |   stat    cut     size |  int/sqrtN  rnd/sqrtN | mass out
+    20 |    d_r    240 0.043146 |   -0.01437   -0.01464 |  0.0e+00
+    20 |    d_u     17 0.033156 |   -0.00506   -0.00725 |  0.0e+00
+    20 | Lambda     10 0.020726 |   +0.02605   +0.05183 |  0.0e+00
+    20 | ratio d_r/Lambda  int -0.55168  rnd -0.28252   (d_u/Lambda int -0.1943)   [0.0 s]
+    40 |    d_r    345 0.041859 |   -0.00961   -0.01065 |  2.5e-14
+    40 |    d_u     24 0.048583 |   +0.00186   +0.00186 |  2.5e-14
+    40 | Lambda     17 0.028987 |   +0.03180   +0.04838 |  2.5e-14
+    40 | ratio d_r/Lambda  int -0.30223  rnd -0.22019   (d_u/Lambda int +0.0583)   [0.0 s]
+    80 |    d_r    480 0.048258 |   -0.00677   -0.00686 |  0.0e+00
+    80 |    d_u     37 0.045166 |   +0.00961   +0.01010 |  0.0e+00
+    80 | Lambda     30 0.036464 |   +0.03611   +0.04595 |  0.0e+00
+    80 | ratio d_r/Lambda  int -0.18750  rnd -0.14932   (d_u/Lambda int +0.2661)   [0.0 s]
+   160 |    d_r    685 0.049250 |   -0.00515   -0.00478 |  0.0e+00
+   160 |    d_u     59 0.047043 |   +0.02235   +0.02346 |  0.0e+00
+   160 | Lambda     55 0.038129 |   +0.03590   +0.04434 |  0.0e+00
+   160 | ratio d_r/Lambda  int -0.14344  rnd -0.10783   (d_u/Lambda int +0.6226)   [0.2 s]
+   320 |    d_r    965 0.049745 |   -0.00372   -0.00361 |  0.0e+00
+   320 |    d_u    104 0.043945 |   +0.03647   +0.04021 |  0.0e+00
+   320 | Lambda    102 0.046933 |   +0.04103   +0.04305 |  0.0e+00
+   320 | ratio d_r/Lambda  int -0.09079  rnd -0.08376   (d_u/Lambda int +0.8891)   [1.6 s]
+   640 |    d_r   1365 0.049399 |   -0.00253   -0.00255 |  0.0e+00
+   640 |    d_u    195 0.044884 |   +0.03972   +0.04315 |  0.0e+00
+   640 | Lambda    195 0.043352 |   +0.03771   +0.04219 |  0.0e+00
+   640 | ratio d_r/Lambda  int -0.06715  rnd -0.06043   (d_u/Lambda int +1.0534)   [15.7 s]
+  exact-integer check N=20: cuts identical, max relative difference of size/slopes = 5.1e-15; exact d_r slope = -0.0642702379  [0.0 s]
+  exact-integer check N=40: cuts identical, max relative difference of size/slopes = 3.0e-14; exact d_r slope = -0.0607935717  [0.5 s]
+
+run-length   q = 16:8:4:2:1:1   L = 32
+  delta = (+0.3810, -0.3636, +0.0952, -0.0909, +0.0238, -0.0455)   Lambda = sum sgn(g_i) D_i, sgn(g) = [-1, -1, -1, -1, 0]
+     N |   stat    cut     size |  int/sqrtN  rnd/sqrtN | mass out
+    20 |    d_r    484 0.046885 |   -0.02342   -0.02696 |  0.0e+00
+    20 |    d_u     17 0.045161 |   +0.04669   +0.05013 |  0.0e+00
+    20 | Lambda     13 0.045278 |   +0.06737   +0.07210 |  0.0e+00
+    20 | ratio d_r/Lambda  int -0.34767  rnd -0.37397   (d_u/Lambda int +0.6930)   [0.0 s]
+    40 |    d_r    696 0.045429 |   -0.01854   -0.01680 |  1.7e-14
+    40 |    d_u     28 0.047081 |   +0.05487   +0.05750 |  1.7e-14
+    40 | Lambda     24 0.049163 |   +0.07005   +0.07090 |  1.7e-14
+    40 | ratio d_r/Lambda  int -0.26471  rnd -0.23701   (d_u/Lambda int +0.7832)   [0.1 s]
+    80 |    d_r    976 0.047818 |   -0.01218   -0.01230 |  3.7e-15
+    80 |    d_u     49 0.045175 |   +0.05379   +0.05853 |  3.7e-15
+    80 | Lambda     46 0.034048 |   +0.05119   +0.06943 |  3.7e-15
+    80 | ratio d_r/Lambda  int -0.23791  rnd -0.17716   (d_u/Lambda int +1.0509)   [0.9 s]
+   160 |    d_r   1408 0.043975 |   -0.00833   -0.00862 |  0.0e+00
+   160 |    d_u     90 0.044345 |   +0.05474   +0.06042 |  0.0e+00
+   160 | Lambda     87 0.037201 |   +0.05416   +0.06856 |  0.0e+00
+   160 | ratio d_r/Lambda  int -0.15385  rnd -0.12576   (d_u/Lambda int +1.0108)   [7.4 s]
+   320 |    d_r   1984 0.046223 |   -0.00595   -0.00608 |  0.0e+00
+   320 |    d_u    171 0.041588 |   +0.05219   +0.06078 |  0.0e+00
+   320 | Lambda    166 0.048453 |   +0.06618   +0.06780 |  0.0e+00
+   320 | ratio d_r/Lambda  int -0.08995  rnd -0.08965   (d_u/Lambda int +0.7886)   [43.8 s]
+   640 |    d_r   2784 0.049350 |   -0.00428   -0.00429 |  0.0e+00
+   640 |    d_u    329 0.046640 |   +0.05598   +0.05928 |  0.0e+00
+   640 | Lambda    323 0.047506 |   +0.06463   +0.06728 |  0.0e+00
+   640 | ratio d_r/Lambda  int -0.06619  rnd -0.06381   (d_u/Lambda int +0.8661)   [392.4 s]
+  exact-integer check N=20: cuts identical, max relative difference of size/slopes = 3.7e-15; exact d_r slope = -0.1047408782  [0.2 s]
+  exact-integer check N=40: cuts identical, max relative difference of size/slopes = 3.3e-14; exact d_r slope = -0.1172818721  [4.9 s]
+
+comb null   q = 1:2:1:2:1   L = 7
+  delta = (+0.1667, -0.2500, +0.1667, -0.2500, +0.1667)   Lambda = sum sgn(g_i) D_i, sgn(g) = [1, -1, 1, -1]
+     N |   stat    cut     size |  int/sqrtN  rnd/sqrtN | mass out
+    20 |    d_r    116 0.046846 |   +0.00846   +0.00180 |  1.7e-15
+    20 |    d_u     24 0.036574 |   -0.07712   -0.09867 |  1.7e-15
+    20 | Lambda     24 0.035860 |   -0.07647   -0.09962 |  1.7e-15
+    20 | ratio d_r/Lambda  int -0.11059  rnd -0.01804   (d_u/Lambda int +1.0085)   [0.0 s]
+    40 |    d_r    165 0.049525 |   +0.00484   +0.00413 |  2.4e-14
+    40 |    d_u     40 0.046546 |   -0.09543   -0.10100 |  2.4e-14
+    40 | Lambda     40 0.046373 |   -0.09527   -0.10114 |  2.4e-14
+    40 | ratio d_r/Lambda  int -0.05077  rnd -0.04079   (d_u/Lambda int +1.0017)   [0.0 s]
+    80 |    d_r    233 0.049185 |   +0.00505   +0.00323 |  1.8e-14
+    80 |    d_u     70 0.048031 |   -0.09845   -0.10163 |  1.8e-14
+    80 | Lambda     70 0.048021 |   -0.09845   -0.10164 |  1.8e-14
+    80 | ratio d_r/Lambda  int -0.05127  rnd -0.03179   (d_u/Lambda int +1.0001)   [0.0 s]
+   160 |    d_r    332 0.048729 |   -0.00052   +0.00231 |  1.4e-14
+   160 |    d_u    126 0.048322 |   -0.09919   -0.10192 |  1.4e-14
+   160 | Lambda    126 0.048321 |   -0.09919   -0.10192 |  1.4e-14
+   160 | ratio d_r/Lambda  int +0.00527  rnd -0.02266   (d_u/Lambda int +1.0000)   [0.2 s]
+   320 |    d_r    469 0.048903 |   -0.00034   -0.00039 |  5.2e-15
+   320 |    d_u    232 0.048445 |   -0.09956   -0.10209 |  5.2e-15
+   320 | Lambda    232 0.048445 |   -0.09956   -0.10209 |  5.2e-15
+   320 | ratio d_r/Lambda  int +0.00338  rnd +0.00387   (d_u/Lambda int +1.0000)   [1.7 s]
+   640 |    d_r    663 0.049896 |   +0.00023   +0.00047 |  4.1e-14
+   640 |    d_u    435 0.049654 |   -0.10164   -0.10220 |  4.1e-14
+   640 | Lambda    435 0.049654 |   -0.10164   -0.10220 |  4.1e-14
+   640 | ratio d_r/Lambda  int -0.00229  rnd -0.00456   (d_u/Lambda int +1.0000)   [17.4 s]
+  exact-integer check N=20: cuts identical, max relative difference of size/slopes = 9.0e-14; exact d_r slope = +0.0378214055  [0.0 s]
+  exact-integer check N=40: cuts identical, max relative difference of size/slopes = 5.1e-13; exact d_r slope = +0.0305893265  [0.5 s]
+
+Log-log slopes in N (least squares over the N grid; NaN if a sign changes)
+  quantity:  slope/sqrt(N) of d_r, Lambda, d_u; ratio d_r/Lambda.  The claim
+  predicts -0.5 for d_r/sqrt(N) and the ratio, 0 for Lambda/sqrt(N).
+         null |  cut |     d_r  Lambda     d_u |   ratio | local exponent of the ratio per doubling
+         ramp |  int |  -0.486  +0.107    +nan |  -0.594 | -0.87 -0.69 -0.39 -0.66 -0.44
+         ramp |  rnd |  -0.509  -0.058    +nan |  -0.451 | -0.36 -0.56 -0.47 -0.36 -0.47
+   run-length |  int |  -0.507  -0.013  +0.032 |  -0.493 | -0.39 -0.15 -0.63 -0.77 -0.44
+   run-length |  rnd |  -0.519  -0.020  +0.043 |  -0.499 | -0.66 -0.42 -0.49 -0.49 -0.49
+    comb null |  int |    +nan  +0.064  +0.062 |    +nan | -1.12 +0.01 sign -0.64 sign
+    comb null |  rnd |    +nan  +0.007  +0.009 |    +nan | +1.18 -0.36 -0.49 sign sign
+
+Exact two-sign power gap of d_r (dr_exact.py DP, alternative-centred; no floats).
+a = exact l1 amplitude of p +- a delta; gap = power(+) - power(-);
+linear = 2 a beta'(0) with the integer cut; the gap's odd part is 2a beta'(0) + O(a^3).
+         null    N         a |   cut   power +   power -        gap |     linear gap/linear
+         ramp   20  0.200000 |   240  0.097780  0.126436  -0.028656 |  -0.025708      1.115
+         ramp   40  0.200000 |   345  0.175870  0.201095  -0.025225 |  -0.024317      1.037
+         ramp   80  0.200000 |   480  0.369298  0.381507  -0.012209 |  -0.024226      0.504
+         ramp   20  0.020000 |   240  0.042494  0.045070  -0.002576 |  -0.002571      1.002
+         ramp   40  0.020000 |   345  0.041910  0.044351  -0.002441 |  -0.002432      1.004
+         ramp   80  0.020000 |   480  0.049848  0.052284  -0.002436 |  -0.002423      1.006
+   run-length   20  0.199138 |   484  0.100521  0.144280  -0.043759 |  -0.041716      1.049
+   run-length   40  0.199138 |   696  0.182639  0.230366  -0.047727 |  -0.046711      1.022
+   run-length   80  0.199138 |   976  0.382369  0.400725  -0.018356 |  -0.043382      0.423
+   run-length   20  0.019997 |   484  0.045500  0.049694  -0.004195 |  -0.004189      1.001
+   run-length   40  0.019997 |   696  0.044524  0.049231  -0.004707 |  -0.004690      1.004
+   run-length   80  0.019997 |   976  0.048666  0.053042  -0.004376 |  -0.004356      1.005
+    comb null   20  0.195918 |   116  0.111405  0.093820  +0.017586 |  +0.014820      1.187
+    comb null   40  0.195918 |   165  0.189696  0.175825  +0.013871 |  +0.011986      1.157
+    comb null   80  0.195918 |   233  0.341450  0.326756  +0.014694 |  +0.017687      0.831
+    comb null   20  0.019992 |   116  0.048127  0.046610  +0.001517 |  +0.001512      1.003
+    comb null   40  0.019992 |   165  0.051324  0.050092  +0.001232 |  +0.001223      1.007
+    comb null   80  0.019992 |   233  0.052471  0.050644  +0.001826 |  +0.001805      1.012
+

@@ -1,0 +1,15 @@
+DP vs independent brute force on random rational nulls; also total mass = L^N
+ case                          q    N     L  support  mass ok  agrees
+    0         (1, 7, 6, 3, 6, 8)    4    31       61      yes     yes
+    1              (2, 11, 1, 5)    6    19       35      yes     yes
+    2                     (5, 7)    2    12        3      yes     yes
+    3                     (3, 2)   11     5       12      yes     yes
+    4                     (7, 9)   13    16       14      yes     yes
+    5                   (10, 11)    9    21       10      yes     yes
+   25           (3, 2, 1, 2, 10)    4    18       28      yes     yes
+   50                     (6, 9)   12    15       13      yes     yes
+   75              (6, 4, 5, 11)    8    26       73      yes     yes
+  100              (11, 5, 6, 4)    7    26       58      yes     yes
+  125           (3, 3, 11, 2, 5)    6    24       31      yes     yes
+
+150 random rational nulls: 0 disagreements with brute force

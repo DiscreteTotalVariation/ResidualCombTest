@@ -1,0 +1,39 @@
+null: run lengths of a fair i.i.d. bitstream, q=(16, 8, 4, 2, 1, 1), L=32, exactly rational
+alternative: two-lane generator, P(flip) = 1/2 + (-1)^t eps, measured from 8,000,000 bits
+
+measured run-length distribution of the generator
+   eps      k=1      k=2      k=3      k=4      k=5      k=6  l1 from null
+  0.00  0.50003  0.24960  0.12532  0.06272  0.03121  0.03112       0.00115
+  0.02  0.49913  0.25112  0.12473  0.06268  0.03117  0.03116       0.00262
+  0.05  0.49501  0.25749  0.12232  0.06395  0.03034  0.03090       0.01787
+  0.07  0.48998  0.26458  0.12024  0.06493  0.02964  0.03064       0.03401
+  0.10  0.48000  0.28035  0.11525  0.06694  0.02761  0.02985       0.06957
+  0.15  0.45441  0.31796  0.10346  0.07238  0.02349  0.02831       0.15568
+(the null itself is 0.50000 0.25000 0.12500 0.06250 0.03125 0.03125)
+
+exact critical values for the CT (d_r) under the null (alpha=0.05), no Monte Carlo
+    N    L*d_r crit  exact size
+  100          1100      0.0493
+  200          1560      0.0485
+
+PART A.  Fixed-N multinomial design, measured alternative law, alpha=0.05, MC-calibrated.
+min-p = min over t in {0, 0.5, 1} of the p-value of T(t); its null calibration uses a SECOND independent null batch.
+
+N = 200 runs   (mean count per bin 33.3)   [CT(exact) uses the EXACT critical value, no MC]
+   eps       l1     DTV      CT    T(1)   min-p      X2       G    CT(exact)
+  0.00  0.00115   0.048   0.049   0.051   0.049   0.051   0.049        0.049  (size)
+  0.02  0.00262   0.047   0.048   0.051   0.049   0.050   0.049        0.048
+  0.05  0.01787   0.038   0.056   0.057   0.056   0.052   0.053        0.056
+  0.07  0.03401   0.030   0.081   0.073   0.077   0.060   0.062        0.081
+  0.10  0.06957   0.021   0.171   0.145   0.158   0.103   0.107        0.171
+  0.15  0.15568   0.011   0.606   0.530   0.574   0.410   0.407        0.606
+
+N = 1000 runs   (mean count per bin 166.7)
+   eps       l1     DTV      CT    T(1)   min-p      X2       G
+  0.00  0.00115   0.049   0.049   0.050   0.051   0.049   0.049  (size)
+  0.02  0.00262   0.043   0.051   0.051   0.051   0.049   0.049
+  0.05  0.01787   0.031   0.088   0.082   0.087   0.067   0.068
+  0.07  0.03401   0.018   0.190   0.163   0.181   0.120   0.122
+  0.10  0.06957   0.006   0.607   0.537   0.586   0.424   0.424
+  0.15  0.15568   0.000   0.999   0.997   0.999   0.994   0.994
+

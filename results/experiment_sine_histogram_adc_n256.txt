@@ -1,0 +1,38 @@
+IEEE 1241 sine-wave histogram test, n=256 codes, amplitude 1.02 FS, alpha=0.05
+null = arcsine code density (irrational): p_min=0.00244 (centre), p_max=0.07450 (rails), ratio 30.6
+analytic vs simulated null, 2,000,000 sine samples: l1 gap 0.00848, chi2 p=0.431
+
+l1 distances from the null:
+  comb eps=  0.05   l1=0.0436
+  comb eps= -0.05   l1=0.0436
+  comb eps=  0.10   l1=0.0873
+  comb eps= -0.10   l1=0.0873
+    TI eps=  0.00   l1=0.0455
+
+N = 2000   (mean count per code 7.8; linearity of the arcsine null 0.291)
+ kind    eps       DTV      DTV2        CT      T(1)     min-p        X2         G        AC        vN     X2asy    dr_gam
+ comb   0.00     0.049     0.049     0.051     0.050     0.050     0.049     0.048     0.051     0.050     0.051     0.050  (size)
+ comb   0.05     0.091     0.062     0.095     0.093     0.094     0.074     0.072     0.506     0.082     0.076     0.094
+ comb  -0.05     0.089     0.063     0.092     0.089     0.092     0.075     0.075     0.482     0.084     0.078     0.092
+ comb   0.10     0.306     0.216     0.330     0.321     0.329     0.186     0.181     0.973     0.232     0.191     0.330
+ comb  -0.10     0.306     0.216     0.329     0.314     0.327     0.181     0.177     0.972     0.239     0.186     0.329
+   TI   0.00     0.224     0.141     0.124     0.048     0.104     0.070     0.101     0.051     0.004     0.073     0.124  (gain/offset mismatch: smooth, not a comb)
+
+N = 10000   (mean count per code 39.1; linearity of the arcsine null 0.329)
+ kind    eps       DTV      DTV2        CT      T(1)     min-p        X2         G        AC        vN     X2asy    dr_gam
+ comb   0.00     0.049     0.051     0.053     0.051     0.051     0.049     0.050     0.046     0.048     0.048     0.052  (size)
+ comb   0.05     0.406     0.301     0.436     0.418     0.428     0.246     0.242     0.991     0.298     0.243     0.432
+ comb  -0.05     0.398     0.298     0.437     0.420     0.428     0.241     0.238     0.991     0.291     0.239     0.432
+ comb   0.10     0.996     0.993     0.998     0.997     0.998     0.951     0.951     1.000     0.908     0.951     0.998
+ comb  -0.10     0.998     0.995     0.999     0.998     0.999     0.953     0.952     1.000     0.910     0.953     0.999
+   TI   0.00     0.730     0.615     0.602     0.095     0.558     0.543     0.588     0.055     0.000     0.540     0.597  (gain/offset mismatch: smooth, not a comb)
+
+N = 50000   (mean count per code 195.3; linearity of the arcsine null 0.359)
+ kind    eps       DTV      DTV2        CT      T(1)     min-p        X2         G        AC        vN     X2asy    dr_gam
+ comb   0.00     0.047     0.047     0.050     0.048     0.049     0.048     0.049     0.048     0.047     0.050     0.049  (size)
+ comb   0.05     1.000     0.999     1.000     1.000     1.000     0.990     0.990     1.000     0.961     0.991     1.000
+ comb  -0.05     1.000     0.999     1.000     1.000     1.000     0.991     0.991     1.000     0.959     0.991     1.000
+ comb   0.10     1.000     1.000     1.000     1.000     1.000     1.000     1.000     1.000     1.000     1.000     1.000
+ comb  -0.10     1.000     1.000     1.000     1.000     1.000     1.000     1.000     1.000     1.000     1.000     1.000
+   TI   0.00     1.000     1.000     1.000     0.319     1.000     1.000     1.000     0.089     0.000     1.000     1.000  (gain/offset mismatch: smooth, not a comb)
+

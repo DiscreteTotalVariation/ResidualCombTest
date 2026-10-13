@@ -1,0 +1,41 @@
+collapse index Corr_H0(||x||_V, Lambda) by exact enumeration of the <= 4-bin
+multinomial marginals every moment needs; integer arithmetic, no Monte Carlo.
+Lambda = sum_i sign(p_i - p_{i-1}) (x_i - x_{i-1}); a flat step has sign 0.
+On the uniform null Lambda is identically zero and the index is undefined;
+it is reported as 0, the convention of the Monte Carlo estimator.
+
+uniform control   q=1:1:1:1:1
+    N |    index | moments
+   10 |   0.0000 | Lambda is identically zero
+   20 |   0.0000 | Lambda is identically zero
+   30 |   0.0000 | Lambda is identically zero
+   40 |   0.0000 | Lambda is identically zero
+
+comb null   q=1:2:1:2:1
+    N |    index | moments
+   10 |   0.7636 | cov 14.469633  var_dtv 12.748967  var_lambda 28.163265
+   20 |   0.8818 | cov 38.193539  var_dtv 33.308615  var_lambda 56.326531
+   30 |   0.9321 | cov 65.548622  var_dtv 58.530762  var_lambda 84.489796
+   40 |   0.9582 | cov 94.622229  var_dtv 86.558160  var_lambda 112.653061
+
+ramp   q=1:2:3:4:5
+    N |    index | moments
+   10 |   0.0473 | cov 0.224208  var_dtv 6.844332  var_lambda 3.288889
+   20 |   0.1589 | cov 1.472033  var_dtv 13.052776  var_lambda 6.577778
+   30 |   0.2315 | cov 3.130226  var_dtv 18.522365  var_lambda 9.866667
+   40 |   0.2898 | cov 5.084607  var_dtv 23.402746  var_lambda 13.155556
+
+tent   q=1:2:3:4:3:2:1
+    N |    index | moments
+   10 |   0.2369 | cov 2.176365  var_dtv 8.573714  var_lambda 9.843750
+   20 |   0.3521 | cov 6.502163  var_dtv 17.325622  var_lambda 19.687500
+   30 |   0.4344 | cov 11.953237  var_dtv 25.645070  var_lambda 29.531250
+   40 |   0.5006 | cov 18.240617  var_dtv 33.715553  var_lambda 39.375000
+
+run-length   q=16:8:4:2:1:1
+    N |    index | moments
+   10 |   0.2356 | cov 0.894403  var_dtv 4.626557  var_lambda 3.115234
+   20 |   0.5093 | cov 3.750036  var_dtv 8.702413  var_lambda 6.230469
+   30 |   0.6439 | cov 6.953729  var_dtv 12.478414  var_lambda 9.345703
+   40 |   0.7230 | cov 10.216891  var_dtv 16.024089  var_lambda 12.460938
+

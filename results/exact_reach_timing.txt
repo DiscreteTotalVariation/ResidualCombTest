@@ -1,0 +1,11 @@
+Wall-clock cost of the exact DP of d_r, and the d_u DP for reference (SAME sparse program, increment |m-k|: like for like).
+null q=(16, 8, 4, 2, 1, 1), L=32.  Timings are machine-dependent; the Letter quotes
+only the ratio, to one digit.  Median of 3 runs per cell.
+
+     N       d_r s    d_u s  ratio  support    c
+    50         0.6      0.2    2.5      858    8
+   100         7.0      3.5    2.0      935    4
+   200        87.3     67.9    1.3      973    2
+
+The residue count c is NOT a function of q and N mod L alone: it depends on
+which sign patterns are reachable, and is larger for odd N than even.

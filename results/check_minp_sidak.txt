@@ -1,0 +1,10 @@
+N=500, alpha=0.05; Sidak cut 0.01695, Bonferroni 0.01667, MC cut per null below; 200000 null draws per batch, 100000 alternative draws
+                      null            dep   MC cut |  size MC size Sid size Bon |  pow MC pow Sid pow Bon corr(p0,p1)
+             uniform (n=8)       additive   0.0500 |    0.051    0.017    0.017 |   0.449   0.300   0.300       1.000
+             uniform (n=8) multiplicative   0.0500 |    0.051    0.017    0.017 |   0.445   0.297   0.297       1.000
+      tent q=1:2:3:4:3:2:1       additive   0.0440 |    0.050    0.020    0.019 |   0.472   0.339   0.337       0.983
+      tent q=1:2:3:4:3:2:1 multiplicative   0.0440 |    0.050    0.020    0.019 |   0.498   0.368   0.366       0.983
+        ramp q=1:2:3:4:5:6       additive   0.0428 |    0.050    0.021    0.020 |   0.551   0.418   0.416       0.982
+        ramp q=1:2:3:4:5:6 multiplicative   0.0428 |    0.050    0.021    0.020 |   0.510   0.382   0.380       0.982
+ run-length q=16:8:4:2:1:1       additive   0.0377 |    0.050    0.023    0.023 |   0.815   0.722   0.720       0.933
+ run-length q=16:8:4:2:1:1 multiplicative   0.0377 |    0.050    0.023    0.023 |   0.554   0.429   0.428       0.933

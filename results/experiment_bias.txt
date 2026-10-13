@@ -1,0 +1,106 @@
+Exact size and power over a lattice of alternatives; power < size means the test is biased
+against that alternative (Good and Smith 1984).  The letter's own regime is a period-2 comb
+at l1 about 0.1 to 0.2.
+
+null q=(1, 2, 1, 2, 1), L=7, N=40, alpha=0.05: 14 alternatives (exhaustive)
+   CT  size 0.0495: power below size in 0/14
+   du  size 0.0465: power below size in 11/14; smallest l1 0.286 (power 0.0005); deepest power 0.0004; 0 of them within l1 = 0.25
+null q=(1, 2, 1, 2, 1), L=7, N=20, alpha=0.05: 14 alternatives (exhaustive)
+   CT  size 0.0468: power below size in 0/14
+   du  size 0.0366: power below size in 11/14; smallest l1 0.286 (power 0.0019); deepest power 0.0007; 0 of them within l1 = 0.25
+null q=(16, 8, 4, 2, 1, 1), L=32, N=12, alpha=0.05: 6000 alternatives (random 6000 of 169910)
+   CT  size 0.0495: power below size in 8/6000; smallest l1 0.188 (power 0.0420); deepest power 0.0284; 3 of them within l1 = 0.25
+   du  size 0.0457: power below size in 15/6000; smallest l1 0.062 (power 0.0383); deepest power 0.0322; 5 of them within l1 = 0.25
+null q=(1, 1, 1, 1, 1), L=5, N=30, alpha=0.05: 0 alternatives (exhaustive)
+   CT  size 0.0396: power below size in 0/0
+   du  size 0.0396: power below size in 0/0
+null q=(1, 2, 3, 4, 3, 2, 1), L=16, N=10, alpha=0.05: 5004 alternatives (exhaustive)
+   CT  size 0.0479: power below size in 357/5004; smallest l1 0.125 (power 0.0478); deepest power 0.0208; 16 of them within l1 = 0.25
+   du  size 0.0298: power below size in 1331/5004; smallest l1 0.125 (power 0.0233); deepest power 0.0017; 50 of them within l1 = 0.25
+null q=(1, 2, 3, 4, 3, 2, 1), L=16, N=16, alpha=0.05: 5004 alternatives (exhaustive)
+   CT  size 0.0473: power below size in 12/5004; smallest l1 0.375 (power 0.0432); deepest power 0.0419; 0 of them within l1 = 0.25
+   du  size 0.0396: power below size in 659/5004; smallest l1 0.125 (power 0.0336); deepest power 0.0062; 29 of them within l1 = 0.25
+null q=(3, 1, 3), L=7, N=40, alpha=0.05: 14 alternatives (exhaustive)
+   CT  size 0.0497: power below size in 0/14
+   du  size 0.0161: power below size in 7/14; smallest l1 0.286 (power 0.0000); deepest power 0.0000; 0 of them within l1 = 0.25
+null q=(1, 5, 1), L=7, N=30, alpha=0.05: 14 alternatives (exhaustive)
+   CT  size 0.0409: power below size in 0/14
+   du  size 0.0431: power below size in 14/14; smallest l1 0.286 (power 0.0005); deepest power 0.0000; 0 of them within l1 = 0.25
+null q=(2, 3, 5, 2), L=12, N=24, alpha=0.05: 164 alternatives (exhaustive)
+   CT  size 0.0384: power below size in 0/164
+   du  size 0.0401: power below size in 86/164; smallest l1 0.167 (power 0.0295); deepest power 0.0000; 5 of them within l1 = 0.25
+null q=(1, 1, 4, 1, 1), L=8, N=25, alpha=0.05: 34 alternatives (exhaustive)
+   CT  size 0.0422: power below size in 0/34
+   du  size 0.0460: power below size in 32/34; smallest l1 0.250 (power 0.0088); deepest power 0.0000; 4 of them within l1 = 0.25
+
+Restricted to period-2 combs, the class the comb test is designed for:
+
+null q=(1, 2, 1, 2, 1), N=40: 14 period-2 combs (both signs, eps from 0.02 to 0.5)
+   CT  power below size in 0/14
+   du  power below size in 7/14; largest shortfall 0.0460 (power 0.0006 vs size 0.0465) at eps=0.25, l1=0.254
+null q=(1, 2, 1, 2, 1), N=20: 14 period-2 combs (both signs, eps from 0.02 to 0.5)
+   CT  power below size in 1/14; largest shortfall 0.0002 (power 0.0466 vs size 0.0468) at eps=0.02, l1=0.020
+   du  power below size in 7/14; largest shortfall 0.0345 (power 0.0021 vs size 0.0366) at eps=0.25, l1=0.254
+null q=(16, 8, 4, 2, 1, 1), N=12: 14 period-2 combs (both signs, eps from 0.02 to 0.5)
+   CT  power below size in 4/14; largest shortfall 0.0031 (power 0.0464 vs size 0.0495) at eps=0.05, l1=0.044
+   du  power below size in 4/14; largest shortfall 0.0037 (power 0.0420 vs size 0.0457) at eps=0.10, l1=0.093
+null q=(1, 2, 3, 4, 3, 2, 1), N=10: 14 period-2 combs (both signs, eps from 0.02 to 0.5)
+   CT  power below size in 0/14
+   du  power below size in 4/14; largest shortfall 0.0024 (power 0.0275 vs size 0.0298) at eps=0.05, l1=0.050
+null q=(1, 2, 3, 4, 3, 2, 1), N=16: 14 period-2 combs (both signs, eps from 0.02 to 0.5)
+   CT  power below size in 0/14
+   du  power below size in 4/14; largest shortfall 0.0036 (power 0.0360 vs size 0.0396) at eps=0.05, l1=0.050
+null q=(3, 1, 3), N=40: 14 period-2 combs (both signs, eps from 0.02 to 0.5)
+   CT  power below size in 2/14; largest shortfall 0.0010 (power 0.0488 vs size 0.0497) at eps=0.02, l1=0.010
+   du  power below size in 7/14; largest shortfall 0.0159 (power 0.0002 vs size 0.0161) at eps=0.50, l1=0.381
+null q=(1, 5, 1), N=30: 14 period-2 combs (both signs, eps from 0.02 to 0.5)
+   CT  power below size in 3/14; largest shortfall 0.0025 (power 0.0384 vs size 0.0409) at eps=0.04, l1=0.032
+   du  power below size in 7/14; largest shortfall 0.0431 (power 0.0000 vs size 0.0431) at eps=0.50, l1=0.519
+null q=(2, 3, 5, 2), N=24: 14 period-2 combs (both signs, eps from 0.02 to 0.5)
+   CT  power below size in 1/14; largest shortfall 0.0002 (power 0.0383 vs size 0.0384) at eps=0.02, l1=0.019
+   du  power below size in 6/14; largest shortfall 0.0314 (power 0.0087 vs size 0.0401) at eps=0.25, l1=0.254
+null q=(1, 1, 4, 1, 1), N=25: 14 period-2 combs (both signs, eps from 0.02 to 0.5)
+   CT  power below size in 3/14; largest shortfall 0.0025 (power 0.0398 vs size 0.0422) at eps=0.04, l1=0.029
+   du  power below size in 7/14; largest shortfall 0.0453 (power 0.0007 vs size 0.0460) at eps=0.50, l1=0.500
+
+Mechanism, exactly: power, mean and standard deviation against amplitude
+
+null q=(16, 8, 4, 2, 1, 1), N=12: CT rejects S>372, exact size 0.0495; du rejects >12, exact size 0.0457
+    eps   CT power  power-size   E[S]/E0   sd/sd0   du power  power-size
+  0.005    0.04898    -0.00050   0.99916  0.99768    0.04620    +0.00055
+  0.010    0.04853    -0.00095   0.99844  0.99552    0.04678    +0.00113
+  0.020    0.04775    -0.00173   0.99733  0.99167    0.04804    +0.00238
+  0.040    0.04670    -0.00279   0.99642  0.98585    0.05094    +0.00529
+  0.050    0.04642    -0.00307   0.99660  0.98385    0.05259    +0.00693
+  0.050    0.04642    -0.00307   0.99660  0.98385    0.05259    +0.00693
+  0.100    0.04733    -0.00216   1.00370  0.98217    0.06275    +0.01709
+  0.200    0.05982    +0.01034   1.04590  1.01007    0.09298    +0.04732
+  0.200    0.05982    +0.01034   1.04590  1.01007    0.09298    +0.04732
+  0.250    0.07116    +0.02168   1.07920  1.03214    0.11335    +0.06770
+
+null q=(1, 1, 3), N=30: CT rejects S>60, exact size 0.0398; du rejects >22, exact size 0.0481
+    eps   CT power  power-size   E[S]/E0   sd/sd0   du power  power-size
+  0.005    0.03895    -0.00083   0.99861  0.99530    0.05012    +0.00199
+  0.010    0.03820    -0.00158   0.99755  0.99104    0.05217    +0.00404
+  0.020    0.03697    -0.00281   0.99641  0.98382    0.05645    +0.00833
+  0.040    0.03551    -0.00427   0.99795  0.97438    0.06581    +0.01768
+  0.050    0.03525    -0.00453   1.00054  0.97202    0.07089    +0.02277
+  0.050    0.03525    -0.00453   1.00054  0.97202    0.07089    +0.02277
+  0.100    0.03831    -0.00147   1.03029  0.98006    0.10065    +0.05252
+  0.200    0.06456    +0.02478   1.15875  1.05067    0.18381    +0.13568
+  0.200    0.06456    +0.02478   1.15875  1.05067    0.18381    +0.13568
+  0.250    0.08773    +0.04794   1.24865  1.08906    0.23764    +0.18952
+
+null q=(4, 5, 8), N=25: CT rejects S>222, exact size 0.0496; du rejects >15, exact size 0.0479
+    eps   CT power  power-size   E[S]/E0   sd/sd0   du power  power-size
+  0.005    0.04829    -0.00134   0.99912  0.99670    0.04949    +0.00156
+  0.010    0.04705    -0.00258   0.99862  0.99391    0.05114    +0.00321
+  0.020    0.04492    -0.00471   0.99871  0.98982    0.05469    +0.00676
+  0.040    0.04192    -0.00771   1.00322  0.98745    0.06286    +0.01492
+  0.050    0.04103    -0.00860   1.00758  0.98900    0.06747    +0.01954
+  0.050    0.04103    -0.00860   1.00758  0.98900    0.06747    +0.01954
+  0.100    0.04238    -0.00725   1.04896  1.01944    0.09611    +0.04817
+  0.200    0.07234    +0.02270   1.21506  1.13855    0.18289    +0.13495
+  0.200    0.07234    +0.02270   1.21506  1.13855    0.18289    +0.13495
+  0.250    0.10112    +0.05149   1.33028  1.19764    0.24155    +0.19361
+

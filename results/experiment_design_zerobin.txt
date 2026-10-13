@@ -1,0 +1,13 @@
+a null weight of zero means a bin that cannot occur; the Letter assumes
+strictly positive weights.  What the code does at that boundary:
+
+  q=[1, 0, 1]: 4 atoms, mass 64 vs L^N = 64, consistent
+  q=[2, 0, 3]: 7 atoms, mass 15625 vs L^N = 15625, consistent
+  q=[0, 1, 1]: 4 atoms, mass 64 vs L^N = 64, consistent
+  q=[1, 1, 0]: 4 atoms, mass 64 vs L^N = 64, consistent
+
+A zero weight still gives a consistent law: the bin simply never receives
+a count, so the statistic is the centered DTV d_r of the remaining bins with a
+fixed zero in between.  It is a valid null, not a failure; the Letter's
+positivity assumption is about the IMAGE experiment, where an unoccupied
+code would make the estimated null degenerate, not about the DP.

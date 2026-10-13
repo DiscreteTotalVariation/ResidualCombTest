@@ -1,0 +1,17 @@
+exact law of the p-value P = Pr[S >= s] under H0; a valid p-value needs
+Pr[P <= u] <= u at every attainable u, and the test at level alpha needs
+attained size <= alpha
+
+                     q    N  atoms  max Pr[P<=u]-u  size(.05)   ok
+       (1, 5, 5, 2, 5)    9     22        0.00e+00     0.0371  yes
+             (5, 2, 8)    3      8        0.00e+00     0.0486  yes
+             (4, 1, 4)    9     14        0.00e+00     0.0317  yes
+                (1, 2)    4      5        0.00e+00     0.0123  yes
+       (1, 5, 7, 8, 1)   11     26        0.00e+00     0.0376  yes
+       (6, 3, 2, 1, 7)   10    139        0.00e+00     0.0478  yes
+             (4, 1, 4)   12     19        0.00e+00     0.0136  yes
+             (8, 4, 3)   10     28        0.00e+00     0.0284  yes
+             (4, 3, 6)   10     29        0.00e+00     0.0152  yes
+          (8, 3, 5, 1)    9     74        0.00e+00     0.0459  yes
+
+120 random nulls: 0 violations of super-uniformity or of the attained size

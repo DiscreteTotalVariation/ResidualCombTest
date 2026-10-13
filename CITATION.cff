@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite it as below."
+title: "ResidualCombTest: the comb test for histograms under a non-uniform null"
+authors:
+  - family-names: "Banić"
+    given-names: "Nikola"
+  - family-names: "Elezović"
+    given-names: "Neven"
+repository-code: "https://github.com/DiscreteTotalVariation/ResidualCombTest"
+license: MIT

@@ -1,0 +1,35 @@
+power at alpha=0.05, N=2000, l1=0.04, worse of the two
+signs, all MC-calibrated on the same 60000 null draws.
+smooth{k} = Neyman smooth test on the k highest frequencies; smooth1 is the top frequency only,
+i.e. the period-2 oracle (AC up to the projection); smooth2..4 are the period-unknown versions;
+AC = the period-2 oracle.  Comb rows are the Letter's own alternative class.
+
+                    null        departure        CT        AC        X2   smooth1   smooth2   smooth3   smooth4
+             uniform n=8  comb (period 2)     0.292     0.434     0.197     0.367     0.284     0.271     0.239
+             uniform n=8  comb (period 4)     0.263     0.049     0.401     0.051     0.050     0.104     0.321
+             uniform n=8             tilt     0.053     0.076     0.261     0.051     0.049     0.052     0.050
+             uniform n=8      smooth bump     0.064     0.052     0.243     0.047     0.049     0.050     0.056
+
+      tent 1:2:3:4:3:2:1  comb (period 2)     0.336     0.420     0.217     0.397     0.310     0.278     0.252
+      tent 1:2:3:4:3:2:1  comb (period 4)     0.275     0.045     0.433     0.047     0.176     0.151     0.477
+      tent 1:2:3:4:3:2:1             tilt     0.054     0.044     0.345     0.048     0.050     0.049     0.071
+      tent 1:2:3:4:3:2:1      smooth bump     0.106     0.053     0.267     0.052     0.053     0.126     0.113
+
+        ramp 1:2:3:4:5:6  comb (period 2)     0.347     0.432     0.238     0.379     0.303     0.280     0.253
+        ramp 1:2:3:4:5:6  comb (period 4)     0.333     0.091     0.396     0.054     0.247     0.316     0.425
+        ramp 1:2:3:4:5:6             tilt     0.058     0.081     0.306     0.046     0.048     0.047     0.101
+        ramp 1:2:3:4:5:6      smooth bump     0.101     0.060     0.294     0.047     0.058     0.089     0.320
+
+ run-length 16:8:4:2:1:1  comb (period 2)     0.400     0.461     0.254     0.398     0.319     0.307     0.271  <- CT best
+ run-length 16:8:4:2:1:1  comb (period 4)     0.190     0.126     0.282     0.046     0.071     0.285     0.308
+ run-length 16:8:4:2:1:1             tilt     0.095     0.168     0.385     0.054     0.055     0.107     0.162
+ run-length 16:8:4:2:1:1      smooth bump     0.147     0.092     0.352     0.045     0.049     0.164     0.381
+
+    geometric n=12 b=0.2  comb (period 2)     0.272     0.429     0.164     0.354     0.276     0.260     0.234
+    geometric n=12 b=0.2  comb (period 4)     0.168     0.057     0.242     0.049     0.050     0.049     0.048
+    geometric n=12 b=0.2             tilt     0.050     0.062     0.209     0.049     0.045     0.044     0.042
+    geometric n=12 b=0.2      smooth bump     0.052     0.053     0.201     0.046     0.045     0.047     0.048
+
+If smooth2..4 matched the CT on the comb rows, the Letter would owe the
+reader that comparison; if they lose power for the extra components, the
+CT's advantage over non-oracle order-aware tests is real.

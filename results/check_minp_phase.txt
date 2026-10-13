@@ -1,0 +1,7 @@
+min-p phase check: null p ∝ exp(-beta i), n=6, N=1000, l1=0.08, alpha=0.05; 200000 null draws per batch, 100000 alternative draws per sign
+ beta   minp +   minp -   ratio   DTV +   DTV -     ratio
+ 0.00    0.592    0.594    1.00   0.586   0.589       1.0
+ 0.20    0.596    0.601    1.01   0.600   0.098       6.1
+ 0.40    0.623    0.623    1.00   0.495   0.001     543.8
+ 0.70    0.680    0.673    1.01   0.610   0.000    4065.7
+ 1.00    0.762    0.741    1.03   0.729   0.000   24301.0

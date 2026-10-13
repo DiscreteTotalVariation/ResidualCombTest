@@ -1,0 +1,30 @@
+N=500, l1 distance=0.1, alpha=0.05
+T(0)=CT (d_r), T(1)=DTV of adjusted residuals, min-p = combination over t in {0, 0.5, 1}
+null calibration split across two independent batches, so 'size' is a real check
+
+                      null       departure     T(0)   T(0.5)     T(1)    min-p       X2      DTV
+             uniform (n=8)     size (null)    0.049   0.051*    0.050    0.051    0.050    0.049
+             uniform (n=8)  multiplicative    0.439   0.446*    0.442    0.447    0.314    0.439
+             uniform (n=8)        additive    0.437   0.444*    0.440    0.445    0.315    0.437
+
+      tent q=1:2:3:4:3:2:1     size (null)    0.049    0.049    0.049    0.050   0.051*    0.050
+      tent q=1:2:3:4:3:2:1  multiplicative    0.498   0.499*    0.495    0.501    0.343    0.003
+      tent q=1:2:3:4:3:2:1        additive    0.427    0.457   0.484*    0.471    0.431    0.002
+
+        ramp q=1:2:3:4:5:6     size (null)    0.050   0.050*    0.050    0.050    0.049    0.050
+        ramp q=1:2:3:4:5:6  multiplicative   0.515*    0.510    0.499    0.512    0.377    0.177
+        ramp q=1:2:3:4:5:6        additive    0.497    0.534   0.571*    0.554    0.512    0.078
+
+ run-length q=16:8:4:2:1:1     size (null)    0.050    0.051   0.052*    0.051    0.050    0.047
+ run-length q=16:8:4:2:1:1  multiplicative   0.575*    0.548    0.494    0.548    0.387    0.413
+ run-length q=16:8:4:2:1:1        additive    0.625    0.756   0.841*    0.814    0.811    0.402
+
+worst-case shortfall against the best fixed statistic in each cell
+(the price of committing to one statistic before seeing the data)
+                 statistic    worst     mean
+                      T(0)    0.216    0.045
+                    T(0.5)    0.086    0.023
+                      T(1)    0.081    0.014
+                     min-p    0.027    0.010
+                        X2    0.188    0.111
+                       DTV    0.497    0.303

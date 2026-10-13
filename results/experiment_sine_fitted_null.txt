@@ -1,0 +1,33 @@
+# experiment_sine_fitted_null.py: (defaults)
+# python 3.12.3, numpy 2.4.1, scipy 1.17.1; seed 33
+IEEE 1241 sine-wave histogram test with a FITTED arcsine null: n=64 codes, true amplitude 1.02 FS, true offset 0.0 FS, N=10000, SAR comb eps=+-0.05, alpha=0.05
+Sampling: random phase (asynchronous), so counts are multinomial(N, p).
+Estimator: IEEE 1241 histogram closed form from the end-code counts, first/last transitions pinned at nominal; see the docstring.
+
+estimator check, one record of 1e9 samples: A^=1.02000 (true 1.02), C^=-0.000002 (true 0.0)
+estimates under H0 at N=10000: A^ mean 1.02006 sd 0.00213; C^ mean -0.000001 sd 0.002266 (FS; 1 LSB = 0.03125)
+cuts, true-parameter null:  CT MC 983.6, CT gamma 983.4, X2 MC 82.73, X2 chi2(63) 82.53, chi2(61) 80.23
+cuts, fitted statistic (oracle MC at true parameters): CT 950.2, X2 80.66
+null mean of the statistic: CT true 822.2 vs fitted 794.3;  X2 true 63.00 vs fitted 61.45
+
+H0 (size): A^ mean 1.02005, C^ mean -0.000002  [55 s]
+comb eps=+0.05: A^ mean 1.02005, C^ mean -0.001557  [109 s]
+comb eps=-0.05: A^ mean 1.02005, C^ mean +0.001549  [163 s]
+
+rejection rate (MC standard error); 100000 records per condition, bootstrap columns 10000 records x B=999
+procedure                H0 (size)    comb eps=+0.05    comb eps=-0.05        worse sign
+CT true/MC           0.050 (0.001)     0.764 (0.001)     0.772 (0.001)     0.764 (0.001)
+CT true/gam          0.050 (0.001)     0.765 (0.001)     0.772 (0.001)     0.765 (0.001)
+X2 true/MC           0.048 (0.001)     0.504 (0.002)     0.509 (0.002)     0.504 (0.002)
+CT fit/trueMC        0.025 (0.000)     0.652 (0.002)     0.661 (0.001)     0.652 (0.002)
+CT fit/trueGam       0.025 (0.000)     0.653 (0.002)     0.662 (0.001)     0.653 (0.002)
+X2 fit/trueMC        0.037 (0.001)     0.435 (0.002)     0.440 (0.002)     0.435 (0.002)
+X2 fit/chi2(n-1)     0.038 (0.001)     0.440 (0.002)     0.445 (0.002)     0.440 (0.002)
+X2 fit/chi2(n-3)     0.055 (0.001)     0.504 (0.002)     0.509 (0.002)     0.504 (0.002)
+CT fit/oracle        0.050 (0.001)     0.748 (0.001)     0.755 (0.001)     0.748 (0.001)
+X2 fit/oracle        0.051 (0.001)     0.492 (0.002)     0.498 (0.002)     0.492 (0.002)
+CT fit/boot          0.048 (0.002)     0.748 (0.004)     0.744 (0.004)     0.744 (0.004)
+X2 fit/boot          0.049 (0.002)     0.497 (0.005)     0.479 (0.005)     0.479 (0.005)
+
+reference, experiment_sine_histogram_adc.txt at N=10000, eps=+-0.05: size CT 0.050, X2 0.048; power CT 0.772/0.772 (MC), 0.770/0.771 (gamma), X2 0.508/0.509
+runtime 163 s

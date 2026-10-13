@@ -1,0 +1,20 @@
+degenerate and boundary inputs
+  OK    n = 1, N = 5: single bin, no adjacent pair, S = 0 with all the mass
+  OK    n = 0: empty weight list returns an empty distribution
+  OK    n = 2, N = 0: mass = L^N: [(0, 1)]
+  OK    n = 2, N = 1: mass = L^N: [(4, 3), (6, 2)]
+  OK    q=[4, 4, 4], N=6: DP == brute force and mass = L^N
+  OK    q=[1, 1, 9], N=6: DP == brute force and mass = L^N
+  OK    q=[9, 1, 1, 1, 1], N=5: DP == brute force and mass = L^N
+  OK    q=[2, 2, 5, 5], N=7: DP == brute force and mass = L^N
+  OK    q=[1, 8], N=9: DP == brute force and mass = L^N
+  OK    q=[7, 7], N=8: DP == brute force and mass = L^N
+  OK    q=[1, 2, 1], N=4 (N mod L = 0): mass = L^N
+  OK    q=[1, 2, 1], N=8 (N mod L = 0): mass = L^N
+  OK    q=[16, 8, 4, 2, 1, 1], N=32 (N mod L = 0): mass = L^N
+  OK    q=[16, 8, 4, 2, 1, 1], N=33 (N mod L = 1): mass = L^N
+  OK    equal weights q_i = 1 (L = 3): S = L*DTV, counts x 1^N
+  OK    equal weights q_i = 2 (L = 6): S = L*DTV, counts x 2^N
+  OK    equal weights q_i = 5 (L = 15): S = L*DTV, counts x 5^N
+
+0 failures on degenerate inputs

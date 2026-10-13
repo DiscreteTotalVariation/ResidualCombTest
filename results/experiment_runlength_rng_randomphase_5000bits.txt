@@ -1,0 +1,40 @@
+null: run lengths of a fair i.i.d. bitstream, q=(16, 8, 4, 2, 1, 1), L=32, exactly rational
+alternative: two-lane generator, P(flip) = 1/2 + (-1)^t eps, measured from 4,000,000 bits
+
+measured run-length distribution of the generator
+   eps      k=1      k=2      k=3      k=4      k=5      k=6  l1 from null
+  0.00  0.50010  0.24945  0.12554  0.06276  0.03112  0.03104       0.00180
+  0.05  0.49494  0.25718  0.12260  0.06393  0.03035  0.03100       0.01723
+  0.07  0.48971  0.26520  0.12022  0.06476  0.02963  0.03046       0.03494
+  0.10  0.48013  0.27994  0.11519  0.06708  0.02759  0.03006       0.06904
+(the null itself is 0.50000 0.25000 0.12500 0.06250 0.03125 0.03125)
+
+exact critical values for the CT (d_r) under the null (alpha=0.05), no Monte Carlo
+    N    L*d_r crit  exact size
+   10           334      0.0473
+   20           484      0.0469
+   30           598      0.0475
+  100          1100      0.0493
+  200          1560      0.0485
+
+(Part B windows start on a RANDOM lane)
+
+PART B.  Same-data design: every statistic is computed on the SAME windows of 2N bits.
+Histogram statistics use the run-length histogram of the window (end runs dropped, so N is random with mean ~N);
+bit statistics are NIST SP 800-22 style: mono = frequency, runs = runs test, dft = spectral (DFT) test, ser{m} = serial nabla psi^2_m and ser{m}d = serial nabla^2 psi^2_m for block lengths m in [2, 3, 4, 5, 6], apen{m} = approximate entropy for m in [2, 3, 4]; the letter quotes the best block length per test, which favors NIST.
+alpha=0.05, 40000 null / 20000 alternative windows per cell, MC-calibrated.
+
+windows of 2000 bits  (~1000 runs)
+   eps     DTV      CT   min-p      X2    mono    runs     dft    lrun    ser2    ser3    ser4    ser5    ser6   ser3d   ser4d   ser5d   ser6d   apen2   apen3   apen4
+  0.00   0.044   0.048   0.049   0.049   0.049   0.049   0.037   0.051   0.053   0.048   0.049   0.052   0.051   0.047   0.050   0.053   0.051   0.047   0.048   0.051  (size)
+  0.05   0.034   0.091   0.088   0.069   0.045   0.048   0.034   0.090   0.049   0.059   0.061   0.066   0.063   0.069   0.057   0.060   0.054   0.063   0.061   0.067
+  0.07   0.023   0.200   0.192   0.131   0.042   0.050   0.036   0.150   0.048   0.091   0.113   0.117   0.117   0.115   0.095   0.080   0.073   0.096   0.110   0.119
+  0.10   0.010   0.603   0.580   0.435   0.035   0.046   0.035   0.318   0.041   0.250   0.372   0.419   0.410   0.335   0.258   0.201   0.148   0.263   0.359   0.404
+
+windows of 5000 bits  (~2500 runs)
+   eps     DTV      CT   min-p      X2    mono    runs     dft    lrun    ser2    ser3    ser4    ser5    ser6   ser3d   ser4d   ser5d   ser6d   apen2   apen3   apen4
+  0.00   0.050   0.049   0.050   0.050   0.051   0.051   0.050   0.051   0.051   0.053   0.051   0.051   0.052   0.050   0.051   0.052   0.049   0.052   0.051   0.050  (size)
+  0.05   0.029   0.141   0.134   0.095   0.048   0.049   0.050   0.163   0.049   0.077   0.087   0.089   0.086   0.091   0.076   0.068   0.061   0.080   0.085   0.092
+  0.07   0.018   0.415   0.396   0.264   0.044   0.051   0.050   0.316   0.048   0.166   0.232   0.255   0.246   0.221   0.169   0.134   0.098   0.172   0.228   0.249
+  0.10   0.005   0.942   0.935   0.853   0.042   0.047   0.046   0.523   0.045   0.600   0.805   0.871   0.880   0.713   0.603   0.482   0.364   0.607   0.796   0.860
+

@@ -1,0 +1,46 @@
+comb at l1=0.04, alpha=0.05, 40000 draws per cell
+rho_min/rho_med over adjacent pairs; locked_frac = fraction with rho_i > 2
+ratio = max/min power over the two comb phases; worst = the smaller of the two
+
+N = 500
+                      null  rho_med  locked  linearity |    DTV ratio  DTV worst |    CT worst
+               uniform n=8     0.00    0.00      0.000 |          1.0      0.097 |       0.097
+        tent 1:2:3:4:3:2:1     2.52    1.00      0.991 |         11.3      0.013 |       0.109
+          ramp 1:2:3:4:5:6     1.85    0.40      0.847 |          3.8      0.035 |       0.115
+            comb 1:2:1:2:1     5.00    1.00      1.000 |         41.8      0.005 |       0.113
+   run-length 16:8:4:2:1:1     3.26    0.80      0.961 |          8.2      0.015 |       0.129
+         image camera n=64     0.32    0.10      0.310 |          1.0      0.064 |       0.068
+          image coins n=64     0.16    0.00      0.079 |          1.0      0.063 |       0.068
+           image moon n=64     0.14    0.10      0.924 |         12.4      0.011 |       0.116
+           image page n=64     0.19    0.02      0.302 |          2.1      0.044 |       0.069
+           image cell n=64     0.09    0.08      0.800 |          8.0      0.017 |       0.109
+  rank correlation between the index and MINUS d_u's worse-sign power: 0.915 (higher index, less power; see experiment_rho_sweep.py for 42 nulls spanning the range)
+
+N = 2000
+                      null  rho_med  locked  linearity |    DTV ratio  DTV worst |    CT worst
+               uniform n=8     0.00    0.00      0.000 |          1.0      0.284 |       0.284
+        tent 1:2:3:4:3:2:1     5.03    1.00      1.000 |        118.8      0.003 |       0.327
+          ramp 1:2:3:4:5:6     3.70    1.00      0.999 |         82.0      0.003 |       0.343
+            comb 1:2:1:2:1    10.00    1.00      1.000 |       1122.4      0.001 |       0.340
+   run-length 16:8:4:2:1:1     6.52    0.80      0.964 |         62.4      0.005 |       0.394
+         image camera n=64     0.64    0.19      0.446 |          1.6      0.083 |       0.158
+          image coins n=64     0.31    0.05      0.163 |          1.0      0.132 |       0.144
+           image moon n=64     0.27    0.13      0.947 |        140.3      0.002 |       0.337
+           image page n=64     0.37    0.06      0.509 |          4.4      0.042 |       0.149
+           image cell n=64     0.19    0.11      0.898 |         72.0      0.004 |       0.316
+  rank correlation between the index and MINUS d_u's worse-sign power: 0.903 (higher index, less power; see experiment_rho_sweep.py for 42 nulls spanning the range)
+
+N = 10000
+                      null  rho_med  locked  linearity |    DTV ratio  DTV worst |    CT worst
+               uniform n=8     0.00    0.00      0.000 |          1.0      0.934 |       0.934
+        tent 1:2:3:4:3:2:1    11.25    1.00      1.000 |      32136.0      0.000 |       0.953
+          ramp 1:2:3:4:5:6     8.28    1.00      1.000 |      14961.0      0.000 |       0.959
+            comb 1:2:1:2:1    22.36    1.00      1.000 |  990875000.0      0.000 |       0.959
+   run-length 16:8:4:2:1:1    14.59    0.80      0.966 |       8492.2      0.000 |       0.974
+         image camera n=64     1.42    0.37      0.663 |          2.5      0.179 |       0.744
+          image coins n=64     0.70    0.10      0.355 |          1.1      0.562 |       0.707
+           image moon n=64     0.61    0.21      0.970 |  834675000.0      0.000 |       0.949
+           image page n=64     0.83    0.16      0.700 |          7.4      0.081 |       0.717
+           image cell n=64     0.42    0.21      0.934 |      32083.0      0.000 |       0.940
+  rank correlation between the index and MINUS d_u's worse-sign power: 0.842 (higher index, less power; see experiment_rho_sweep.py for 42 nulls spanning the range)
+

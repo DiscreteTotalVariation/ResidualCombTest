@@ -1,0 +1,27 @@
+scaling in N, weights q=(1,2,1,2,1), n=5, L=7
+    N   support       d_r s      d_u s   ratio
+   10        78       0.002      0.001     1.5
+   15       121       0.004      0.004     1.1
+   20       171       0.012      0.012     1.1
+   30       265       0.033      0.025     1.3
+   45       408       0.145      0.110     1.3
+fitted slopes in N:  support 1.10 (predicted 1),  time 2.91 (predicted 4), d_u time 2.91 (predicted 4)
+
+scaling in L at fixed N=15, n=5, weights q=(1,k,1,k,1)
+the 'range' column is the O(L*N) span of L*d_r; 'support' is what the DP actually visits
+    L    k     range   support  density   seconds
+    5    1       151        30    0.199     0.002
+    7    2       271       121    0.446     0.003
+   11    4       511       115    0.225     0.003
+   19    8       991       112    0.113     0.003
+   35   16      1951       111    0.057     0.003
+   67   32      3871       111    0.029     0.003
+fitted slopes in L:  support 0.30 (predicted 0),  time 0.20 (predicted 0)
+
+residue classes c = number of distinct values of S mod L on the support, for the letter's nulls; bound min(L, 2^(n-1))
+                        null     L  bound N=10   N=15   N=20   N=25   N=40   N=100 
+           uniform 1:1:1:1:1     5      5 1      1      1      1      1      1     
+              comb 1:2:1:2:1     7      7 5      5      5      5      5      5     
+          tent 1:2:3:4:3:2:1    16     16 4      7      2      7      1      2     
+            ramp 1:2:3:4:5:6    21     21 5      6      6      5      6      6     
+     run-length 16:8:4:2:1:1    32     32 8      16     4      16     2      4     
